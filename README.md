@@ -16,3 +16,6 @@ Edit the file to suit your configuration needs
 Under the proxy-aca folder, there is a app.js file. Run
 
 $ node app.js
+
+##GitHub Note
+To update project from master, do a remote fetch, then a local merge
