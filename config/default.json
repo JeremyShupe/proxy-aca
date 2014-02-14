@@ -1,0 +1,78 @@
+{
+	"debug": { 
+		"on": true,
+		"allowSslSelfSignedCerts": true
+	},
+	"proxyaca": {
+		"hostname": "localhost",
+		"mountpoint": "/proxy_core/webservices/ACAEnrollmentVerificationProxy",
+		"port": "9000",
+		"ssl": {
+			"on": false,
+			"port": "9001",
+			"key": "./ssl/keys/server.key",
+		    "cert": "./ssl/certs/server.crt",
+		    "ca": "./ssl/ca/ca.crt",
+		    "requestCert": true,
+		    "rejectUnauthorized": true
+		}
+	},
+	"outgoing": {
+		"hostname": "localhost",
+		"endpoint" : "/MockACAEnrollmentVerificationHttpBinding",
+		"port": "8088",
+		"ssl": {
+			"on": false,
+			"port": "8089",
+			"ca": [],
+			"key": "",
+			"cert": "",
+		    "pfx": "./ssl/p12s/client.p12",
+		    "passphrase": "abcd1234",
+		    "agent" : false
+		}
+	},
+	"rawBody": {
+		"encoding": "utf8",
+		"limit": "10mb"
+	},
+    "log": {
+        "console": {
+            "level": "trace",
+            "colorize": true,
+            "label": "proxy-aca",
+            "timestamp": true
+        },
+        "file": {
+            "filename": "./logs/proxy-aca.log"
+        }
+    },
+    "errors": {
+    	"msgXmlPath" : "./errorMsg.xml",
+		"notFound": {
+			"statusCode": "404",
+			"code": "404",
+			"message": "NOT FOUND"
+		},
+    	"internalServerError" : {
+    		"statusCode": "500",
+    		"code": "500",
+			"message": "INTERNAL SERVER ERROR"
+    	},
+		"outgoingUnavailable": {
+    		"statusCode": "503",
+    		"code": "V1001" ,
+    		"message": "APPLICATION UNAVAILABLE"
+    	},
+    	"entityTooLarge": {
+    		"statusCode": "413",
+    		"code": "entity.too.large" ,
+    		"message": "REQUEST ENTITY TOO LARGE"
+    	},
+    	"requestSizeInvalid": {
+    		"statusCode": "400",
+    		"code": "request.size.invalid" ,
+    		"message": "REQUEST SIZE INVALID"
+    	}
+    }
+}

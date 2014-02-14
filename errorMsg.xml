@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:aca="http://va.gov/viers/schemas/vrm/0.1/vrm/aca" xmlns:ns="http://niem.gov/niem/structures/2.0"
+                  xmlns:ns1="http://niem.gov/niem/niem-core/2.0">
+    <soapenv:Header>
+        <aca:TransactionId >
+            <!--Zero or more repetitions: -->
+            <ns1:IdentificationID>?</ns1:IdentificationID>
+        </aca:TransactionId>
+    </soapenv:Header>
+
+    <soapenv:Body>
+        <soapenv:Fault>
+            <aca:ACAVerificationException>
+                <aca:ErrorCode>?</aca:ErrorCode>
+                <aca:Reason>?</aca:Reason>
+            </aca:ACAVerificationException>
+        </soapenv:Fault>
+    </soapenv:Body>
+</soapenv:Envelope>

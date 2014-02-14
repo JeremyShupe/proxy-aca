@@ -1,0 +1,37 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:aca="http://va.gov/viers/schemas/vrm/0.1/vrm/aca" xmlns:ns="http://niem.gov/niem/structures/2.0" xmlns:ns1="http://niem.gov/niem/niem-core/2.0">
+   <soapenv:Header>
+	<aca:TransactionId ns:id="?" ns:metadata="?" ns:linkMetadata="?">
+         <ns1:IdentificationID ns:id="?" ns:metadata="?" ns:linkMetadata="?">123401</ns1:IdentificationID>
+      </aca:TransactionId>
+   <UsernameToken xmlns="http://siebel.com/webservices">user</UsernameToken><PasswordText xmlns="http://siebel.com/webservices">hello123</PasswordText><SessionType xmlns="http://siebel.com/webservices">Stateless</SessionType></soapenv:Header>
+   <soapenv:Body>
+      <aca:VerifyACAEnrollmentPeriod>
+         <aca:Person ns:id="?" ns:metadata="?" ns:linkMetadata="?">
+            <ns1:PersonBirthDate ns:id="?" ns:metadata="?" ns:linkMetadata="?">
+               <ns1:DateRepresentation>?</ns1:DateRepresentation>
+            </ns1:PersonBirthDate>
+            <ns1:PersonName ns:id="?" ns:metadata="?" ns:linkMetadata="?">
+               <ns1:PersonGivenName ns:id="?" ns:metadata="?" ns:linkMetadata="?">?</ns1:PersonGivenName>
+               <!--Optional:-->
+               <ns1:PersonMiddleName ns:id="?" ns:metadata="?" ns:linkMetadata="?">?</ns1:PersonMiddleName>
+               <ns1:PersonSurName ns:id="?" ns:metadata="?" ns:linkMetadata="?">?</ns1:PersonSurName>
+               <!--Optional:-->
+               <ns1:PersonNameSuffixText ns:id="?" ns:metadata="?" ns:linkMetadata="?">?</ns1:PersonNameSuffixText>
+            </ns1:PersonName>
+            <!--Optional:-->
+            <ns1:PersonSex>?</ns1:PersonSex>
+            <ns1:PersonSSNIdentification ns:id="?" ns:metadata="?" ns:linkMetadata="?">
+               <ns1:IdentificationID ns:id="?" ns:metadata="?" ns:linkMetadata="?">123456789</ns1:IdentificationID>
+            </ns1:PersonSSNIdentification>
+         </aca:Person>
+         <aca:ACAMinimumCoveragePeriod ns:id="?" ns:metadata="?" ns:linkMetadata="?">
+            <ns1:StartDate ns:id="?" ns:metadata="?" ns:linkMetadata="?">
+               <ns1:DateRepresentation>?</ns1:DateRepresentation>
+            </ns1:StartDate>
+            <ns1:EndDate ns:id="?" ns:metadata="?" ns:linkMetadata="?">
+               <ns1:DateRepresentation>?</ns1:DateRepresentation>
+            </ns1:EndDate>
+         </aca:ACAMinimumCoveragePeriod>
+      </aca:VerifyACAEnrollmentPeriod>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,23 @@
+{
+  "name": "proxy-aca",
+  "version": "0.0.1",
+  "private": false,
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": ">=3.4.7",
+    "jade": "*",
+    "node-uuid": ">=1.4.1",
+    "string": ">=1.7.0",
+    "winston": ">=0.7.2",
+    "xmldom": ">=0.1.17",
+    "nconf": ">=0.6.9",
+    "config": "~0.4.35",
+    "vcommons": "~0.1.10",
+    "raw-body": "~1.1.2",
+    "ejs": "~0.8.5",
+    "nimble": "0.0.2"
+  }
+}
