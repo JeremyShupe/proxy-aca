@@ -1,4 +1,3 @@
-
 //Core Module Dependencies
 var http = require('http');
 var https = require('https');
@@ -7,7 +6,7 @@ var fs = require('fs');
 var S = require('string');
 var express = require('express');
 var app = express();
-//process.env.NODE_CONFIG_PERSIST_ON_CHANGE='N'; //turns off writing to the runtime.json file from the applicaiton, while application is running, has to be before require('config') 
+//process.env.NODE_CONFIG_PERSIST_ON_CHANGE='N'; //turns off writing to the runtime.json file from the application while application is running, has to be before require('config') 
 var config = require('config');
 module.exports.config = config; //Exported so it can be used in other Node JF files
 //Application Module Dependencies
